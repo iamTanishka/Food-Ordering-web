@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Restaurants - BellyFull</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Link to your MAIN stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to the NEW restaurants-specific stylesheet -->
+    <link rel="stylesheet" href="restaurants-style.css">
+</head>
+<body>
+
+    <!-- ======================= HEADER (Consistent across pages) ======================= -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-utensils"></i> BellyFull</a>
+            <nav class="main-nav">
+                <a href="index.html">home</a>
+                <a href="shop.html">Shop</a>
+                <a href="Restaurant.html">Restaurant</a>
+                <a href="#">Offers</a>
+                <a href="Contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#"><i class="fa-solid fa-user"></i> Login</a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ======================= RESTAURANTS PAGE CONTENT ======================= -->
+        <section id="restaurants-page">
+            <div class="container">
+                <h1 class="page-title">Top Rated Restaurants in Delhi</h1>
+                
+                <div class="restaurants-list">
+                    
+                    <!-- Restaurant Card 1: Karim's -->
+                    <div class="restaurant-card">
+                        <img class="restaurant-photo" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=700" alt="Food from Karim's" onerror="this.onerror=null;this.src='https://placehold.co/700x400/ff6347/ffffff?text=Karim\'s';">
+                        <div class="restaurant-info">
+                            <h2>Karim's</h2>
+                            <p class="cuisine">Mughlai, North Indian</p>
+                            <div class="overall-rating">
+                                <strong>4.7</strong>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span>(Based on 1,200+ ratings)</span>
+                            </div>
+                            <p class="description">An iconic institution in Old Delhi, famous for its authentic Mughlai cuisine passed down through generations.</p>
+                            
+                            <div class="customer-reviews">
+                                <h4>What Foodies Are Saying:</h4>
+                                <div class="review">
+                                    <div class="review-header">
+                                        <strong>Rohan Sharma</strong>
+                                        <div class="review-rating">★★★★★</div>
+                                    </div>
+                                    <p class="review-comment">"The Mutton Korma is out of this world. You can taste the history in every bite. A must-visit for any food lover in Delhi."</p>
+                                </div>
+                                <div class="review">
+                                    <div class="review-header">
+                                        <strong>Priya Singh</strong>
+                                        <div class="review-rating">★★★★☆</div>
+                                    </div>
+                                    <p class="review-comment">"Absolutely delicious food, though the ambiance is very traditional and can be crowded. The kebabs are a must-try!"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Restaurant Card 2: Indian Accent -->
+                    <div class="restaurant-card">
+                        <img class="restaurant-photo" src="https://images.unsplash.com/photo-1505275350444-836242e94cc7?q=80&w=700" alt="Food from Indian Accent" onerror="this.onerror=null;this.src='https://placehold.co/700x400/ff6347/ffffff?text=Indian+Accent';">
+                        <div class="restaurant-info">
+                            <h2>Indian Accent</h2>
+                            <p class="cuisine">Modern Indian, Fusion</p>
+                            <div class="overall-rating">
+                                <strong>4.9</strong>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span>(Based on 850+ ratings)</span>
+                            </div>
+                            <p class="description">A critically acclaimed restaurant that reinterprets traditional Indian dishes with a modern, inventive twist. Perfect for a fine dining experience.</p>
+                            
+                            <div class="customer-reviews">
+                                <h4>What Foodies Are Saying:</h4>
+                                <div class="review">
+                                    <div class="review-header">
+                                        <strong>Anjali Mehta</strong>
+                                        <div class="review-rating">★★★★★</div>
+                                    </div>
+                                    <p class="review-comment">"An unforgettable meal. The chef's tasting menu was a journey of flavors. Every dish was a piece of art. Worth every penny."</p>
+                                </div>
+                                <div class="review">
+                                    <div class="review-header">
+                                        <strong>Vikram Batra</strong>
+                                        <div class="review-rating">★★★★★</div>
+                                    </div>
+                                    <p class="review-comment">"The best restaurant in India, period. The blue cheese naan and daulat ki chaat are legendary. Impeccable service."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================= FOOTER (Consistent across pages) ======================= -->
+    <footer class="main-footer">
+        <div class="container">
+            <h3>BellyFull</h3>
+            <p>Your Cravings, Delivered.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 BellyFull. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

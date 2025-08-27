@@ -326,3 +326,292 @@ section {
         margin-bottom: 30px;
     }
 }
+/* --- Restaurants Page Specific Styles --- */
+
+#restaurants-page {
+    padding: 40px 0;
+    background-color: #f9f9f9; /* A slightly off-white background for the page */
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.restaurants-list {
+    display: grid;
+    gap: 40px;
+}
+
+/* --- Restaurant Card --- */
+.restaurant-card {
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.restaurant-photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.restaurant-info {
+    padding: 25px 30px;
+}
+
+.restaurant-info h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.restaurant-info .cuisine {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.overall-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+    color: #f39c12; /* Gold color for stars */
+}
+
+.overall-rating strong {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-right: 5px;
+}
+
+.overall-rating span {
+    font-size: 0.9rem;
+    color: #888;
+    margin-left: 10px;
+}
+
+.restaurant-info .description {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+/* --- Customer Reviews Section --- */
+.customer-reviews {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.customer-reviews h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.review {
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.review:last-child {
+    margin-bottom: 0;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.review-header strong {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+.review-rating {
+    font-size: 0.9rem;
+    color: #f39c12;
+}
+
+.review-comment {
+    font-size: 0.95rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* --- Responsive Adjustments for Restaurants Page --- */
+@media (min-width: 992px) {
+    .restaurant-card {
+        flex-direction: row;
+    }
+
+    .restaurant-photo {
+        flex: 0 0 40%; /* Photo takes 40% width */
+        height: auto; /* Auto height to fill container */
+    }
+
+    .restaurant-info {
+        flex: 1; /* Info takes remaining space */
+    }
+}
+
+/* --- Contact Page Specific Styles --- */
+
+#contact-page {
+    padding: 40px 0;
+    background-color: var(--white);
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+/* --- Contact Info & Map Side --- */
+.contact-info-wrapper h3,
+.contact-form-wrapper h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.detail-item i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+
+.detail-item h4 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.detail-item p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.map-container {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+/* --- Contact Form Side --- */
+.contact-form-wrapper {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 99, 71, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* --- Responsive Adjustments for Contact Page --- */
+@media (max-width: 992px) {
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.2rem;
+    }
+    .page-subtitle {
+        font-size: 1rem;
+    }
+}
