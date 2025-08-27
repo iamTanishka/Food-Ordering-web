@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Menu - BellyFull</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Link to your MAIN stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to the NEW shop-specific stylesheet -->
+    <link rel="stylesheet" href="shop-style.css">
+</head>
+<body>
+
+    <!-- ======================= HEADER (Same as index.html) ======================= -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-utensils"></i> BellyFull</a>
+            <nav class="main-nav">
+                <a href="shop.html">Menu</a>
+                <a href="#">Offers</a>
+                <a href="#">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#"><i class="fa-solid fa-user"></i> Login</a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ======================= SHOP PAGE CONTENT ======================= -->
+        <section id="shop-page">
+            <div class="container">
+                <h1 class="page-title">Explore Our Full Menu</h1>
+                <div class="shop-layout">
+                    
+                    <!-- Filter Sidebar -->
+                    <aside class="filter-sidebar">
+                        <h3>Filters</h3>
+                        
+                        <!-- Filter by Category -->
+                        <div class="filter-group">
+                            <h4>Category</h4>
+                            <div class="filter-option">
+                                <input type="checkbox" id="cat-pizza" name="category" value="pizza">
+                                <label for="cat-pizza">Pizza</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="cat-burgers" name="category" value="burgers">
+                                <label for="cat-burgers">Burgers</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="cat-salads" name="category" value="salads">
+                                <label for="cat-salads">Salads</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="cat-sushi" name="category" value="sushi">
+                                <label for="cat-sushi">Sushi</label>
+                            </div>
+                             <div class="filter-option">
+                                <input type="checkbox" id="cat-desserts" name="category" value="desserts">
+                                <label for="cat-desserts">Desserts</label>
+                            </div>
+                        </div>
+
+                        <!-- Filter by Dietary Needs -->
+                        <div class="filter-group">
+                            <h4>Dietary</h4>
+                            <div class="filter-option">
+                                <input type="radio" id="diet-all" name="diet" value="all" checked>
+                                <label for="diet-all">All</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" id="diet-veg" name="diet" value="veg">
+                                <label for="diet-veg">Vegetarian</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="radio" id="diet-nonveg" name="diet" value="nonveg">
+                                <label for="diet-nonveg">Non-Vegetarian</label>
+                            </div>
+                        </div>
+
+                        <!-- Filter by Price -->
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <input type="range" id="price-range" name="price" min="5" max="50" value="50">
+                            <div class="price-value">Up to $50</div>
+                        </div>
+
+                    </aside>
+
+                    <!-- Food Item Grid -->
+                    <div class="food-grid">
+                        <!-- Row 1 -->
+                        <div class="card food-card">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=400" alt="Pepperoni Pizza" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ff6347/ffffff?text=Pizza';">
+                            <div class="card-content">
+                                <h4>Pepperoni Pizza</h4>
+                                <div class="price">$15.99</div>
+                                <div class="rating"><i class="fa-solid fa-star"></i> 4.8</div>
+                                <a href="#" class="btn">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="card food-card">
+                            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=400" alt="Classic Beef Burger" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ff6347/ffffff?text=Burger';">
+                            <div class="card-content">
+                                <h4>Classic Beef Burger</h4>
+                                <div class="price">$11.50</div>
+                                <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
+                                <a href="#" class="btn">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="card food-card">
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=400" alt="Caesar Salad" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ff6347/ffffff?text=Salad';">
+                            <div class="card-content">
+                                <h4>Classic Caesar Salad</h4>
+                                <div class="price">$8.50</div>
+                                <div class="rating"><i class="fa-solid fa-star"></i> 4.5</div>
+                                <a href="#" class="btn">Add to Cart</a>
+                            </div>
+                        </div>
+                        <!-- Row 2 -->
+                        <div class="card food-card">
+                            <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?q=80&w=400" alt="California Roll" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ff6347/ffffff?text=Sushi';">
+                            <div class="card-content">
+                                <h4>California Roll (8 pcs)</h4>
+                                <div class="price">$14.00</div>
+                                <div class="rating"><i class="fa-solid fa-star"></i> 4.7</div>
+                                <a href="#" class="btn">Add to Cart</a>
+                            </div>
+                        </div>
+                         <div class="card food-card">
+                            <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?q=80&w=400" alt="Pasta" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ff6347/ffffff?text=Pasta';">
+                            <div class="card-content">
+                                <h4>Spaghetti Carbonara</h4>
+                                <div class="price">$13.00</div>
+                                <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
+                                <a href="#" class="btn">Add to Cart</a>
+                            </div>
+                        </div>
+                         <div class="card food-card">
+                            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=400" alt="Milkshake" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ff6347/ffffff?text=Drinks';">
+                            <div class="card-content">
+                                <h4>Chocolate Milkshake</h4>
+                                <div class="price">$6.50</div>
+                                <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
+                                <a href="#" class="btn">Add to Cart</a>
+                            </div>
+                        </div>
+                         <!-- Row 3 -->
+                        <div class="card food-card">
+                            <img src="https://images.unsplash.com/photo-1558030006-450675393462?q=80&w=400" alt="Veggie Pizza" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ff6347/ffffff?text=Veggie+Pizza';">
+                            <div class="card-content">
+                                <h4>Garden Veggie Pizza</h4>
+                                <div class="price">$14.99</div>
+                                <div class="rating"><i class="fa-solid fa-star"></i> 4.6</div>
+                                <a href="#" class="btn">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="card food-card">
+                            <img src="https://images.unsplash.com/photo-1625943555419-56a2cb596640?q=80&w=400" alt="Veggie Burger" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ff6347/ffffff?text=Burger';">
+                            <div class="card-content">
+                                <h4>Spicy Veggie Burger</h4>
+                                <div class="price">$9.99</div>
+                                <div class="rating"><i class="fa-solid fa-star"></i> 4.7</div>
+                                <a href="#" class="btn">Add to Cart</a>
+                            </div>
+                        </div>
+                        <div class="card food-card">
+                            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=400" alt="Greek Salad" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ff6347/ffffff?text=Greek+Salad';">
+                            <div class="card-content">
+                                <h4>Fresh Greek Salad</h4>
+                                <div class="price">$9.50</div>
+                                <div class="rating"><i class="fa-solid fa-star"></i> 4.8</div>
+                                <a href="#" class="btn">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================= FOOTER (Same as index.html) ======================= -->
+    <footer class="main-footer">
+        <div class="container">
+            <h3>BellyFull</h3>
+            <p>Your Cravings, Delivered.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 BellyFull. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
