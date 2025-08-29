@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers & Deals - BellyFull</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Link to your MAIN stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to the NEW offers-specific stylesheet -->
+    <link rel="stylesheet" href="offers-style.css">
+</head>
+<body>
+
+    <!-- ======================= HEADER (Consistent across pages) ======================= -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-utensils"></i> BellyFull</a>
+            <nav class="main-nav">
+                <a href="shop.html">Menu</a>
+                <a href="restaurants.html">Restaurants</a>
+                <a href="offers.html">Offers</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="Signup.html"><i class="fa-solid fa-user"></i> Signup</a>
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ======================= OFFERS PAGE CONTENT ======================= -->
+        <section id="offers-page">
+            <div class="container">
+                <div class="page-header">
+                    <h1 class="page-title">Deals, Discounts & New Arrivals</h1>
+                    <p class="page-subtitle">Check out the latest offers and the newest additions to our menu. Don't miss out!</p>
+                </div>
+
+                <!-- Section 1: New Deals -->
+                <div class="offer-section">
+                    <h2 class="section-title-styled"><span><i class="fa-solid fa-tags"></i> Today's Hot Deals</span></h2>
+                    <div class="offer-grid">
+                        <!-- Deal 1 -->
+                        <div class="deal-card">
+                            <div class="deal-badge">50% OFF</div>
+                            <img src="https://images.unsplash.com/photo-1574126154517-d1e0d89ef734?q=80&w=400" alt="Pizza Deal" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ff6347/ffffff?text=Pizza+Deal';">
+                            <div class="deal-content">
+                                <h3>Pizza Mania</h3>
+                                <p>Get 50% off on your second pizza. T&C Apply.</p>
+                                <div class="deal-code">Use Code: <strong>PIZZA50</strong></div>
+                            </div>
+                        </div>
+                        <!-- Deal 2 -->
+                        <div class="deal-card">
+                            <div class="deal-badge">FREE DRINK</div>
+                            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=400" alt="Burger Deal" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ff6347/ffffff?text=Burger+Deal';">
+                            <div class="deal-content">
+                                <h3>Burger Combo</h3>
+                                <p>Buy any burger and get a free milkshake on us!</p>
+                                <div class="deal-code">No code needed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: New Arrivals -->
+                <div class="offer-section">
+                    <h2 class="section-title-styled"><span><i class="fa-solid fa-star"></i> Fresh on the Menu</span></h2>
+                    <div class="grid-4">
+                        <!-- Reusing the food-card style from main stylesheet -->
+                        <div class="card food-card new-arrival">
+                             <div class="arrival-badge">NEW</div>
+                            <img src="https://images.unsplash.com/photo-1625220194771-7ebdea0d3db3?q=80&w=400" alt="Loaded Nachos" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ff6347/ffffff?text=Nachos';">
+                            <div class="card-content">
+                                <h4>Cheesy Loaded Nachos</h4>
+                                <div class="price">$10.99</div>
+                                <p class="item-description">Crispy nachos topped with cheese, salsa, and jalapeños.</p>
+                                <a href="#" class="btn">Order Now</a>
+                            </div>
+                        </div>
+                        <div class="card food-card new-arrival">
+                             <div class="arrival-badge">NEW</div>
+                            <img src="https://images.unsplash.com/photo-1588791219021-5f1ea3a312a1?q=80&w=400" alt="Ramen Bowl" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ff6347/ffffff?text=Ramen';">
+                            <div class="card-content">
+                                <h4>Spicy Miso Ramen</h4>
+                                <div class="price">$14.50</div>
+                                <p class="item-description">Authentic ramen with a rich, spicy miso broth.</p>
+                                <a href="#" class="btn">Order Now</a>
+                            </div>
+                        </div>
+                         <div class="card food-card new-arrival">
+                             <div class="arrival-badge">NEW</div>
+                            <img src="https://images.unsplash.com/photo-1626201352279-a54a13f9b8a3?q=80&w=400" alt="Red Velvet Cake" onerror="this.onerror=null;this.src='https://placehold.co/400x200/ff6347/ffffff?text=Cake';">
+                            <div class="card-content">
+                                <h4>Red Velvet Cake Slice</h4>
+                                <div class="price">$7.00</div>
+                                <p class="item-description">A decadent slice of classic red velvet cake.</p>
+                                <a href="#" class="btn">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: New Varieties / Seasonal -->
+                 <div class="offer-section">
+                    <h2 class="section-title-styled"><span><i class="fa-solid fa-leaf"></i> Seasonal Varieties</span></h2>
+                    <div class="variety-card">
+                        <img src="https://images.unsplash.com/photo-1615478503562-ec2d8aa0e24e?q=80&w=800" alt="Seasonal Salad" onerror="this.onerror=null;this.src='https://placehold.co/800x400/ff6347/ffffff?text=Seasonal+Special';">
+                        <div class="variety-content">
+                            <h3>Summer Mango Salad</h3>
+                            <p>Experience the taste of summer with our refreshing Mango and Avocado Salad. Made with fresh, seasonal ingredients. Available for a limited time only!</p>
+                            <a href="#" class="btn">Explore Seasonal Menu</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================= FOOTER (Consistent across pages) ======================= -->
+    <footer class="main-footer">
+        <div class="container">
+            <h3>BellyFull</h3>
+            <p>Your Cravings, Delivered.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 BellyFull. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

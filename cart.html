@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - BellyFull</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart-style.css">
+</head>
+<body>
+
+    <!-- Header remains the same -->
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-utensils"></i> BellyFull</a>
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="Restaurant.html">Restaurant</a>
+                <a href="./Offer.html">Offers</a>
+                <a href="Contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="Signup.html"><i class="fa-solid fa-user"></i> Signup</a>
+                <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="cart-page">
+            <div class="container">
+                <h1 class="page-title">Your Shopping Cart</h1>
+                
+                <div class="cart-layout">
+                    <!-- Cart Items Table -->
+                    <div class="cart-items">
+                        <!-- Table structure remains the same -->
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Subtotal</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-body">
+                                <!-- Cart items will be dynamically inserted here by JavaScript -->
+                            </tbody>
+                        </table>
+                        <div id="empty-cart-message" style="display: none; text-align: center; padding: 40px;">
+                            <h3>Your cart is empty!</h3>
+                            <p>Looks like you haven't added anything yet.</p>
+                            <a href="shop.html" class="btn" style="width: auto; margin-top: 20px;">Start Shopping</a>
+                        </div>
+                    </div>
+
+                    <!-- Cart Summary -->
+                    <div class="cart-summary" style="display: none;">
+                        <h3>Cart Totals</h3>
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span id="summary-subtotal">$0.00</span>
+                        </div>
+                         <div class="summary-row">
+                            <span>Delivery Fee</span>
+                            <span id="delivery-fee">$5.00</span>
+                        </div>
+                        <div class="summary-row total-row">
+                            <span>Total</span>
+                            <span id="summary-total">$5.00</span>
+                        </div>
+                        <!-- THIS IS THE UPDATED LINE -->
+                        <a href="checkout.html" class="btn checkout-btn">Proceed to Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Footer remains the same -->
+    </footer>
+
+    <!-- Scripts remain the same -->
+    <script src="cart-logic.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // All the previous cart page javascript logic stays exactly the same
+            const cartBody = document.getElementById('cart-body');
+            const emptyCartMessage = document.getElementById('empty-cart-message');
+            const cartSummary = document.querySelector('.cart-summary');
+            const summarySubtotalElem = document.getElementById('summary-subtotal');
+            const deliveryFeeElem = document.getElementById('delivery-fee');
+            const summaryTotalElem = document.getElementById('summary-total');
+
+            function renderCart() {
+                let cart = JSON.parse(localStorage.getItem('bellyFullCart')) || [];
+                cartBody.innerHTML = ''; 
+
+                if (cart.length === 0) {
+                    emptyCartMessage.style.display = 'block';
+                    cartSummary.style.display = 'none';
+                } else {
+                    emptyCartMessage.style.display = 'none';
+                    cartSummary.style.display = 'block';
+
+                    cart.forEach(item => {
+                        const itemRow = document.createElement('tr');
+                        itemRow.classList.add('cart-item');
+                        itemRow.dataset.id = item.id;
+
+                        itemRow.innerHTML = `
+                            <td class="product-info">
+                                <img src="${item.imageSrc}" alt="${item.name}">
+                                <div>
+                                    <p class="product-name">${item.name}</p>
+                                </div>
+                            </td>
+                            <td class="product-price" data-price="${item.price}">$${item.price.toFixed(2)}</td>
+                            <td class="product-quantity">
+                                <div class="quantity-control">
+                                    <button class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="${item.quantity}" min="1">
+                                    <button class="quantity-btn plus">+</button>
+                                </div>
+                            </td>
+                            <td class="product-subtotal">$${(item.price * item.quantity).toFixed(2)}</td>
+                            <td>
+                                <button class="remove-btn"><i class="fa-solid fa-trash"></i></button>
+                            </td>
+                        `;
+                        cartBody.appendChild(itemRow);
+                    });
+                }
+                updateCartTotals();
+            }
+
+            function updateCartTotals() {
+                let cart = JSON.parse(localStorage.getItem('bellyFullCart')) || [];
+                const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+                const deliveryFee = 5.00; // Hardcoded fee
+                const total = subtotal + deliveryFee;
+
+                summarySubtotalElem.textContent = `$${subtotal.toFixed(2)}`;
+                deliveryFeeElem.textContent = `$${deliveryFee.toFixed(2)}`;
+                summaryTotalElem.textContent = `$${total.toFixed(2)}`;
+            }
+
+            function updateItemQuantity(id, change) {
+                let cart = JSON.parse(localStorage.getItem('bellyFullCart')) || [];
+                const item = cart.find(i => i.id === id);
+                if (item) {
+                    item.quantity += change;
+                    if (item.quantity < 1) {
+                        item.quantity = 1; 
+                    }
+                }
+                localStorage.setItem('bellyFullCart', JSON.stringify(cart));
+                renderCart();
+                updateCartIcon(); 
+            }
+            
+            function removeItemFromCart(id) {
+                let cart = JSON.parse(localStorage.getItem('bellyFullCart')) || [];
+                cart = cart.filter(i => i.id !== id);
+                localStorage.setItem('bellyFullCart', JSON.stringify(cart));
+                renderCart();
+                updateCartIcon();
+            }
+
+            cartBody.addEventListener('click', (e) => {
+                const target = e.target;
+                const itemRow = target.closest('.cart-item');
+                if (!itemRow) return;
+
+                const id = itemRow.dataset.id;
+                if (target.classList.contains('plus')) updateItemQuantity(id, 1);
+                if (target.classList.contains('minus')) updateItemQuantity(id, -1);
+                if (target.closest('.remove-btn')) removeItemFromCart(id);
+            });
+            
+            cartBody.addEventListener('change', (e) => {
+                 if (e.target.classList.contains('quantity-input')) {
+                    const itemRow = e.target.closest('.cart-item');
+                    const id = itemRow.dataset.id;
+                    let newQuantity = parseInt(e.target.value);
+                    if (newQuantity < 1) {
+                        newQuantity = 1;
+                        e.target.value = 1;
+                    }
+                    
+                    let cart = JSON.parse(localStorage.getItem('bellyFullCart')) || [];
+                    const item = cart.find(i => i.id === id);
+                    if(item) item.quantity = newQuantity;
+                    localStorage.setItem('bellyFullCart', JSON.stringify(cart));
+                    renderCart();
+                    updateCartIcon();
+                 }
+            });
+
+            renderCart();
+        });
+    </script>
+</body>
+</html>
