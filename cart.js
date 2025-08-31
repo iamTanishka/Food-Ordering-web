@@ -1,6 +1,4 @@
-// This script handles all the logic for adding items to the cart and updating the UI.
-// It is designed to be included on every page that has an "Add to Cart" button.
-
+//DOMContentLoaded -this event ensures the script runs only after the full HTML document has been loaded and parsed.
 document.addEventListener('DOMContentLoaded', () => {
     // Select all buttons on the page that could be used to add items to the cart.
     const addToCartButtons = document.querySelectorAll('.btn');
